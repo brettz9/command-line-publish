@@ -1,5 +1,8 @@
 # command-line-publish
 
+Tool to convert [`command-line-args`](https://www.npmjs.com/package/command-line-args)/[`command-line-usage`](https://github.com/75lb/command-line-usage/)
+JSON arrays to SVG or HTML.
+
 ## Install
 
 ```shell
