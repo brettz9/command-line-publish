@@ -1,0 +1,73 @@
+{
+  "name": "command-line-publish",
+  "version": "0.1.0",
+  "description": "Convert `command-line-usage` JSON or JavaScript ESM into HTML or SVG files",
+  "main": "index.js",
+  "bin": {
+    "clp": "./bin/clp.js",
+    "command-line-publish": "./bin/command-line-publish.js"
+  },
+  "scripts": {
+    "eslint": "eslint --ext js,md,html .",
+    "help": "./bin/clp.js --help",
+    "version": "./bin/clp.js --version",
+    "build-cli-html": "./bin/clp.js --format=html --config=\"./src/optionDefinitions.js\" --target=\"cli.html\"",
+    "build-cli-svg": "./bin/clp.js --format=svg --config=\"./src/optionDefinitions.js\" --target=\"cli.svg\"",
+    "test": "npm run eslint && npm run build-cli-html && npm run build-cli-svg && npm run help && npm run version"
+  },
+  "author": "Brett Zamir",
+  "contributors": [],
+  "license": "MIT",
+  "keywords": [
+    "argv",
+    "parse",
+    "argument",
+    "args",
+    "option",
+    "options",
+    "cli",
+    "command",
+    "line",
+    "docs",
+    "documentation",
+    "command-line-args",
+    "command-line-usage"
+  ],
+  "bugs": "https://github.com/brettz9/command-line-publish/issues",
+  "homepage": "https://github.com/brettz9/command-line-publish",
+  "engines": {
+    "node": ">= 11.14.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brettz9/command-line-publish"
+  },
+  "dependencies": {
+    "ansi-to-html": "git+https://github.com/brettz9/ansi-to-html.git#css-publish",
+    "ansi-to-svg": "^1.4.3",
+    "command-line-args": "^5.1.1",
+    "command-line-usage": "^6.0.2",
+    "node-alias": "^1.0.4",
+    "update-notifier": "^3.0.1"
+  },
+  "devDependencies": {
+    "@mysticatea/eslint-plugin": "^12.0.0",
+    "eslint": "^6.5.1",
+    "eslint-config-ash-nazg": "^11.0.1",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-array-func": "^3.1.3",
+    "eslint-plugin-compat": "^3.3.0",
+    "eslint-plugin-eslint-comments": "^3.1.2",
+    "eslint-plugin-html": "^6.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsdoc": "^15.9.10",
+    "eslint-plugin-markdown": "^1.0.0",
+    "eslint-plugin-no-use-extend-native": "^0.4.1",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-sonarjs": "^0.4.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-unicorn": "^12.0.2",
+    "typescript": "^3.6.3"
+  }
+}
