@@ -15,8 +15,7 @@ if (notifier.update && notifier.update.latest !== pkg.version) {
 
 const {sections, definitions} = require('../src/optionDefinitions.js');
 
-const buildCliHtml = require('../src/build-cli-html.js');
-const buildCliSvg = require('../src/build-cli-svg.js');
+const {html: buildCliHtml, svg: buildCliSvg} = require('../');
 
 const {
   config,

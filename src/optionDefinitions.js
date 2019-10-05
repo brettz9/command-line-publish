@@ -11,7 +11,9 @@ const optionDefinitions = [
   {
     name: 'config', alias: 'c', type: String,
     description: 'Config file (or directory) to process for ' +
-      'opening its Web URL',
+      'opening its Web URL; must export/include a `sections` property, ' +
+      'and it is recommended to export a `definitions` property as well, ' +
+      'for easier reusability with `command-line-args`.',
     typeLabel: '{underline file-path}'
   },
   {

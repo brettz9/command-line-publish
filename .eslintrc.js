@@ -36,6 +36,7 @@ module.exports = {
           'node/no-missing-require': 'off',
           'func-names': 'off',
           'import/newline-after-import': 'off',
+          'node/no-unpublished-require': 'off',
           strict: 'off',
           // Disable until eslint-plugin-jsdoc may fix: https://github.com/gajus/eslint-plugin-jsdoc/issues/211
           indent: 'off'

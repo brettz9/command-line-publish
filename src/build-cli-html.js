@@ -6,7 +6,7 @@ const commandLineUsage = require('command-line-usage');
 
 const {promises: {writeFile}} = fs;
 
-module.exports = async (cliSections, {target, ansiToHtmlOptions} = {}) => {
+module.exports = async (cliSections, {target, ansiToHtmlOptions}) => {
   if (!Array.isArray(cliSections)) {
     throw new TypeError('You must include a `cliSections` array');
   }
