@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 
-const {join} = require('path');
-const cliBasics = require('command-line-basics');
+const {cliBasics, autoAdd} = require('command-line-basics');
 
 const {html: buildCliHtml, svg: buildCliSvg} = require('../');
 
@@ -32,8 +31,7 @@ if (format && !['svg', 'html'].includes(format)) {
 (async () => {
 let cliSections;
 try {
-  // eslint-disable-next-line global-require, import/no-dynamic-require
-  ({sections: cliSections} = require(join(process.cwd(), config)));
+  ({sections: cliSections} = autoAdd(config));
 } catch (err) {
   throw new Error(`Error reading file "${config}": ${err.toString()}`);
 }

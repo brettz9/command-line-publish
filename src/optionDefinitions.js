@@ -20,26 +20,16 @@ const optionDefinitions = [
     name: 'format', alias: 'f', type: String,
     description: 'Format of the output',
     typeLabel: '{underline "json"|"html"}'
-  },
-  {
-    name: 'version', alias: 'v', type: Boolean,
-    description: 'Version of this tool'
-  },
-  {
-    name: 'help', alias: 'h', type: Boolean,
-    description: 'Display this help guide'
   }
 ];
 
 const cliSections = [
   {
-    header: pkg.name,
     // Add italics: `{italic textToItalicize}`
     content: pkg.description +
       '\n\n{italic clp -c="configPath" [--format=svg|html] target}'
   },
   {
-    header: 'Options',
     optionList: optionDefinitions
   }
 ];

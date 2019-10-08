@@ -45,7 +45,7 @@
   "dependencies": {
     "ansi-to-html": "git+https://github.com/brettz9/ansi-to-html.git#css-publish",
     "ansi-to-svg": "^1.4.3",
-    "command-line-basics": "^0.4.1",
+    "command-line-basics": "^0.6.0",
     "command-line-usage": "^6.0.2",
     "node-alias": "^1.0.4"
   },
