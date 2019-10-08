@@ -33,7 +33,7 @@ const optionDefinitions = [
 
 const cliSections = [
   {
-    header: 'command-line-publish',
+    header: pkg.name,
     // Add italics: `{italic textToItalicize}`
     content: pkg.description +
       '\n\n{italic clp -c="configPath" [--format=svg|html] target}'

@@ -2,30 +2,27 @@
 'use strict';
 
 const {join} = require('path');
-const commandLineArgs = require('command-line-args');
-const commandLineUsage = require('command-line-usage');
-const updateNotifier = require('update-notifier');
-const pkg = require('../package.json');
-
-// check if a new version of ncu is available and print an update notification
-const notifier = updateNotifier({pkg});
-if (notifier.update && notifier.update.latest !== pkg.version) {
-  notifier.notify({defer: false});
-}
-
-const {sections, definitions} = require('../src/optionDefinitions.js');
+const cliBasics = require('command-line-basics');
 
 const {html: buildCliHtml, svg: buildCliSvg} = require('../');
+
+const options = cliBasics({
+  optionsPath: '../src/optionDefinitions.js',
+  cwd: __dirname
+});
+
+if (!options) {
+  // eslint-disable-next-line no-process-exit
+  process.exit();
+}
 
 const {
   config,
   target,
-  format = 'svg',
-  version = false,
-  help = false
-} = commandLineArgs(definitions);
+  format = 'svg'
+} = options;
 
-if (!help && !config && !version) {
+if (!config) {
   throw new TypeError('You must include a `config` argument');
 }
 if (format && !['svg', 'html'].includes(format)) {
@@ -33,16 +30,6 @@ if (format && !['svg', 'html'].includes(format)) {
 }
 
 (async () => {
-if (help) {
-  const usage = commandLineUsage(sections);
-  console.log(usage);
-  return;
-}
-if (version) {
-  console.log(pkg.version);
-  return;
-}
-
 let cliSections;
 try {
   // eslint-disable-next-line global-require, import/no-dynamic-require
