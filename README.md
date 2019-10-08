@@ -79,12 +79,16 @@ const optionDefinitions = [
 
 const cliSections = [
   {
+    // We're now actually letting `command-line-basics auto-generate the
+    //  `header` now
     header: pkg.name,
     // Add italics: `{italic textToItalicize}`
     content: pkg.description +
       '\n\n{italic clp -c="configPath" [--format=svg|html] target}'
   },
   {
+    // We're now actually letting `command-line-basics auto-generate the
+    //  `header` now
     header: 'Options',
     optionList: optionDefinitions
   }
@@ -93,3 +97,9 @@ const cliSections = [
 exports.definitions = optionDefinitions;
 exports.sections = cliSections;
 ```
+
+## See also
+
+- [command-line-args](https://github.com/75lb/command-line-args)
+- [command-line-usage](https://github.com/75lb/command-line-usage/)
+- [command-line-basics](https://github.com/brettz9/command-line-basics)
