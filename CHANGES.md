@@ -1,5 +1,9 @@
 # CHANGES for `command-line-publish`
 
+## 0.3.0
+
+- npm: Update `command-line-basics`
+
 ## 0.2.0
 
 - Refactor: Use `pkg.name` for header (better reusability across projects)
