@@ -1,5 +1,9 @@
 # CHANGES for `command-line-publish`
 
+## 0.4.1
+
+- Fix: backslash escaping
+
 ## 0.4.0
 
 - npm: Update `command-line-basics`

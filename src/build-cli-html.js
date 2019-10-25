@@ -39,7 +39,7 @@ module.exports = async (cliSections, {target, ansiToHtmlOptions}) => {
       }
       </style>
     </head>
-    ${ansiToHTML.toHtml(ansiText.replace(/\\/gu, '\\'))}
+    ${ansiToHTML.toHtml(ansiText.replace(/\\/gu, '\\\\'))}
     </body>
     </html>
   `
