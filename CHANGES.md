@@ -1,5 +1,9 @@
 # CHANGES for `command-line-publish`
 
+## 0.5.0
+
+- npm: Update deps and devDeps
+
 ## 0.4.1
 
 - Fix: backslash escaping
