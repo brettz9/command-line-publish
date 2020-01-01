@@ -54,6 +54,7 @@ module.exports = {
       'import/no-commonjs': 'off',
       'compat/compat': 'off',
       'node/no-unsupported-features/node-builtins': ['error', {
+        // Experimental in 10.0.0 and seems ok
         ignores: ['fs.promises']
       }]
     }
