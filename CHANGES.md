@@ -1,5 +1,11 @@
 # CHANGES for `command-line-publish`
 
+## 0.6.0
+
+- npm: Lower `package.json`'s `engines` to 10.0.0 as experimental
+  `fs.promises` seems to still work ok.
+- npm: Update devDeps
+
 ## 0.5.0
 
 - npm: Update deps and devDeps

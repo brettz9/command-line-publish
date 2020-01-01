@@ -52,6 +52,9 @@ module.exports = {
     rules: {
       'node/exports-style': 'off',
       'import/no-commonjs': 'off',
-      'compat/compat': 'off'
+      'compat/compat': 'off',
+      'node/no-unsupported-features/node-builtins': ['error', {
+        ignores: ['fs.promises']
+      }]
     }
   };
