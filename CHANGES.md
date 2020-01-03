@@ -1,5 +1,9 @@
 # CHANGES for `command-line-publish`
 
+## ?
+
+- Docs: Show how to get SVG link to be copy-pasteable (and make ours so)
+
 ## 0.6.0
 
 - npm: Lower `package.json`'s `engines` to 10.0.0 as experimental

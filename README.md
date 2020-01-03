@@ -29,15 +29,16 @@ First as HTML:
 
 - [cli.html](https://brettz9.github.io/command-line-publish/cli.html)
 
-And then as embeddable SVG (not copy-pasteable from Github, but it is if you
-visit the file [directly](https://brettz9.github.io/command-line-publish/cli.svg)):
+And then as embeddable SVG (not copy-pasteable from the README, but it is if
+you visit the file
+[directly](https://brettz9.github.io/command-line-publish/cli.svg)):
 
-[![cli.svg](https://brettz9.github.io/command-line-publish/cli.svg)](cli.svg)
+![cli.svg](https://brettz9.github.io/command-line-publish/cli.svg)
 
 After using the commands to generate, you can:
 
 - Link to the HTML, e.g., as we did above: `[cli.html](https://brettz9.github.io/command-line-publish/cli.html)`
-- Embed the SVG, e.g., as we did above: `[![cli.svg](https://brettz9.github.io/command-line-publish/cli.svg)](cli.svg)`
+- Embed the SVG, e.g., as we did above: `![cli.svg](https://brettz9.github.io/command-line-publish/cli.svg)` (You may also use something like `![cli.svg](https://raw.githubusercontent.com/brettz9/command-line-publish/master/cli.svg?sanitize=true)`)
 
 Note that we have configured this repository's `master` branch to have its
 contents served from Github Pages.
