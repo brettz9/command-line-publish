@@ -29,8 +29,8 @@ First as HTML:
 
 - [cli.html](https://brettz9.github.io/command-line-publish/cli.html)
 
-And then as embeddable SVG (not copy-pasteable from the README, but it is if
-you visit the file
+And then as embeddable SVG (not copy-pasteable on the README, but it is if
+you click the image or visit the file
 [directly](https://brettz9.github.io/command-line-publish/cli.svg)):
 
 ![cli.svg](https://brettz9.github.io/command-line-publish/cli.svg)
