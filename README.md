@@ -38,7 +38,7 @@ you click the image or visit the file
 After using the commands to generate, you can:
 
 - Link to the HTML, e.g., as we did above: `[cli.html](https://brettz9.github.io/command-line-publish/cli.html)`
-- Embed the SVG, e.g., as we did above: `![cli.svg](https://brettz9.github.io/command-line-publish/cli.svg)` (You may also use something like `![cli.svg](https://raw.githubusercontent.com/brettz9/command-line-publish/master/cli.svg?sanitize=true)`)
+- Embed the SVG, e.g., as we did above: `![cli.svg](https://brettz9.github.io/command-line-publish/cli.svg)` (If you are not on Github Pages, you may also use the form: `![cli.svg](https://raw.githubusercontent.com/brettz9/command-line-publish/master/cli.svg?sanitize=true)`)
 
 Note that we have configured this repository's `master` branch to have its
 contents served from Github Pages.
