@@ -1,6 +1,6 @@
 {
   "name": "command-line-publish",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Convert `command-line-usage` JSON or JavaScript ESM into HTML or SVG files",
   "main": "index.js",
   "bin": {

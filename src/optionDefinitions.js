@@ -18,8 +18,8 @@ const optionDefinitions = [
   },
   {
     name: 'format', alias: 'f', type: String,
-    description: 'Format of the output',
-    typeLabel: '{underline "json"|"html"}'
+    description: 'Format of the output; defaults to "svg".',
+    typeLabel: '{underline "svg"|"html"}'
   }
 ];
 

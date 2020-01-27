@@ -1,7 +1,8 @@
 # CHANGES for `command-line-publish`
 
-## ?
+## 0.6.1
 
+- Fix: Was misslabeling export type as "json"; fixed to be "svg"
 - Docs: Show how to get SVG link to be copy-pasteable (and make ours so)
 
 ## 0.6.0
