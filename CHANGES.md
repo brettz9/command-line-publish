@@ -1,5 +1,9 @@
 # CHANGES for `command-line-publish`
 
+## 0.7.0
+
+- npm: Update dep. command-line basics; update devDeps.
+
 ## 0.6.1
 
 - Fix: Was misslabeling export type as "json"; fixed to be "svg"
