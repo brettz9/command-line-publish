@@ -1,5 +1,9 @@
 # CHANGES for `command-line-publish`
 
+## ?
+
+- npm: Add `build-cli` script
+
 ## 0.7.0
 
 - npm: Update dep. command-line basics; update devDeps.

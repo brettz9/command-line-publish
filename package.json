@@ -13,6 +13,7 @@
     "version": "./bin/clp.js --version",
     "build-cli-html": "./bin/clp.js --format=html --config=\"./src/optionDefinitions.js\" --target=\"cli.html\"",
     "build-cli-svg": "./bin/clp.js --format=svg --config=\"./src/optionDefinitions.js\" --target=\"cli.svg\"",
+    "build-cli": "npm run build-cli-svg && npm run build-cli-html",
     "test": "npm run eslint && npm run build-cli-html && npm run build-cli-svg && npm run help && npm run version"
   },
   "author": "Brett Zamir",
