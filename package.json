@@ -10,6 +10,7 @@
     "command-line-publish": "./bin/command-line-publish.js"
   },
   "scripts": {
+    "prepublishOnly": "pnpm i",
     "eslint": "eslint --ext js,md,html .",
     "lint": "npm run eslint",
     "help": "./bin/clp.js --help",
