@@ -1,8 +1,10 @@
 {
   "name": "command-line-publish",
-  "version": "0.7.0",
+  "version": "1.0.0",
   "description": "Convert `command-line-usage` JSON or JavaScript ESM into HTML or SVG files",
+  "type": "module",
   "main": "index.js",
+  "exports": "./index.js",
   "bin": {
     "clp": "./bin/clp.js",
     "command-line-publish": "./bin/command-line-publish.js"
@@ -11,11 +13,11 @@
     "eslint": "eslint --ext js,md,html .",
     "lint": "npm run eslint",
     "help": "./bin/clp.js --help",
-    "version": "./bin/clp.js --version",
+    "v": "./bin/clp.js --version",
     "build-cli-html": "./bin/clp.js --format=html --config=\"./src/optionDefinitions.js\" --target=\"cli.html\"",
     "build-cli-svg": "./bin/clp.js --format=svg --config=\"./src/optionDefinitions.js\" --target=\"cli.svg\"",
     "build-cli": "npm run build-cli-svg && npm run build-cli-html",
-    "test": "npm run eslint && npm run build-cli-html && npm run build-cli-svg && npm run help && npm run version"
+    "test": "npm run eslint && npm run build-cli-html && npm run build-cli-svg && npm run help && npm run v"
   },
   "author": "Brett Zamir",
   "contributors": [],
@@ -47,11 +49,14 @@
   "dependencies": {
     "ansi-to-html": "git+https://github.com/brettz9/ansi-to-html.git#css-publish",
     "ansi-to-svg": "^1.4.3",
-    "command-line-basics": "^1.0.0",
+    "command-line-basics": "^1.0.1",
     "command-line-usage": "^6.1.1",
     "node-alias": "^1.0.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.5",
+    "@babel/eslint-parser": "^7.14.5",
+    "@babel/plugin-syntax-top-level-await": "^7.14.5",
     "@brettz9/eslint-plugin": "^1.0.3",
     "eslint": "^7.28.0",
     "eslint-config-ash-nazg": "^29.17.0",

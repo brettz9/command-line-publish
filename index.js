@@ -1,7 +1,4 @@
-'use strict';
+import svg from './src/build-cli-svg.js';
+import html from './src/build-cli-html.js';
 
-const svg = require('./src/build-cli-svg.js');
-const html = require('./src/build-cli-html.js');
-
-exports.svg = svg;
-exports.html = html;
+export {svg, html};

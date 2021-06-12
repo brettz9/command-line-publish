@@ -6,15 +6,16 @@ module.exports = {
     browser: false
   },
   extends: [
-    'ash-nazg/sauron-node-script-overrides'
+    'ash-nazg/sauron-node-overrides'
   ],
+  parser: '@babel/eslint-parser',
   settings: {
     polyfills: [
     ]
   },
   overrides: [
     {
-      files: ['bin/**'],
+      files: ['bin/*'],
       rules: {
         'no-console': 0
       }
@@ -22,6 +23,11 @@ module.exports = {
     {
       files: ['**/*.md/*.js'],
       rules: {
+        'import/no-unresolved': ['error', {
+          ignore: [
+            'command-line-publish', 'fs/promises', './path/to/config-file.js'
+          ]
+        }],
         'node/no-missing-require': 'off'
       }
     }

@@ -1,10 +1,13 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@babel/core': ^7.14.5
+  '@babel/eslint-parser': ^7.14.5
+  '@babel/plugin-syntax-top-level-await': ^7.14.5
   '@brettz9/eslint-plugin': ^1.0.3
   ansi-to-html: git+https://github.com/brettz9/ansi-to-html.git#css-publish
   ansi-to-svg: ^1.4.3
-  command-line-basics: ^1.0.0
+  command-line-basics: ^1.0.1
   command-line-usage: ^6.1.1
   eslint: ^7.28.0
   eslint-config-ash-nazg: ^29.17.0
@@ -28,11 +31,14 @@ specifiers:
 dependencies:
   ansi-to-html: github.com/brettz9/ansi-to-html/0eaa84080b8b2f1aaa01f99ccaf564c28b11dd4b
   ansi-to-svg: 1.4.3
-  command-line-basics: 1.0.0
+  command-line-basics: 1.0.1
   command-line-usage: 6.1.1
   node-alias: 1.0.4
 
 devDependencies:
+  '@babel/core': 7.14.5
+  '@babel/eslint-parser': 7.14.5_@babel+core@7.14.5+eslint@7.28.0
+  '@babel/plugin-syntax-top-level-await': 7.14.5_@babel+core@7.14.5
   '@brettz9/eslint-plugin': 1.0.3_eslint@7.28.0
   eslint: 7.28.0
   eslint-config-ash-nazg: 29.17.0_931b2dae707158f3e1dd349409f64969
@@ -191,6 +197,11 @@ packages:
       '@babel/types': 7.14.5
     dev: true
 
+  /@babel/helper-plugin-utils/7.14.5:
+    resolution: {integrity: sha512-/37qQCE3K0vvZKwoK4XU/irIJQdIfCJuhU5eKnNxpFDsOkgFaUAwbv+RYw6eYgsC0E4hS7r5KqGULUogqui0fQ==}
+    engines: {node: '>=6.9.0'}
+    dev: true
+
   /@babel/helper-replace-supers/7.14.5:
     resolution: {integrity: sha512-3i1Qe9/8x/hCHINujn+iuHy+mMRLoc77b2nI9TB0zjH1hvn9qGlXjWlggdwUcju36PkPCy/lpM7LLUdcTyH4Ow==}
     engines: {node: '>=6.9.0'}
@@ -251,6 +262,16 @@ packages:
     resolution: {integrity: sha512-TM8C+xtH/9n1qzX+JNHi7AN2zHMTiPUtspO0ZdHflW8KaskkALhMmuMHb4bCmNdv9VAPzJX3/bXqkVLnAvsPfg==}
     engines: {node: '>=6.0.0'}
     hasBin: true
+    dev: true
+
+  /@babel/plugin-syntax-top-level-await/7.14.5_@babel+core@7.14.5:
+    resolution: {integrity: sha512-hx++upLv5U1rgYfwe1xBQUhRmU41NEvpUvrp8jkrSCdvGSnM5/qdRMtylJ6PG5OFkBaHkbTAKTnd3/YyESRHFw==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.14.5
+      '@babel/helper-plugin-utils': 7.14.5
     dev: true
 
   /@babel/template/7.14.5:
@@ -678,8 +699,8 @@ packages:
       typical: 4.0.0
     dev: false
 
-  /command-line-basics/1.0.0:
-    resolution: {integrity: sha512-DpGeuEjF78CziVrezkgZE0uNBf/n6PBu4chrWry9geyZQSQ5QJ9YG2gB/sY1jnOm/ign5ixJ++vf9PjsP9jMhg==}
+  /command-line-basics/1.0.1:
+    resolution: {integrity: sha512-KM7xIDZBIpVm1oI5a+xwXiGQjxwOAH49tpc4gYdzJoeONKNQY81Z3Y3trC6nK39g+//GGGJH+2Plcg+SeAvlCA==}
     engines: {node: '>=14.0.0'}
     dependencies:
       command-line-args: 5.1.1

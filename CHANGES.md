@@ -5,11 +5,13 @@
 ### User-facing
 
 - Breaking change: Require Node 14+
+- Breaking enhancement: Native ESM
 - npm: Update `command-line-basics` (major), `command-line-usage` (patch)
 
 ### Dev-facing
 
 - npm: Update devDeps.
+- npm: Avoid reusing `version` script
 - npm: Switch to pnpm
 - Linting: As per latest
 - npm: Add `build-cli` script

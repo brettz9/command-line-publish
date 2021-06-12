@@ -1,11 +1,15 @@
 #!/usr/bin/env node
-'use strict';
 
-const {cliBasics, autoAdd} = require('command-line-basics');
+import {dirname} from 'path';
+import {fileURLToPath} from 'url';
 
-const {html: buildCliHtml, svg: buildCliSvg} = require('../index.js');
+import {cliBasics, autoAdd} from 'command-line-basics';
 
-const options = cliBasics({
+import {html as buildCliHtml, svg as buildCliSvg} from '../index.js';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+const options = await cliBasics({
   optionsPath: '../src/optionDefinitions.js',
   cwd: __dirname
 });
@@ -27,10 +31,9 @@ if (format && !['svg', 'html'].includes(format)) {
   throw new TypeError('You must include a valid format: "html" or "svg"');
 }
 
-(async () => {
 let cliSections;
 try {
-  ({sections: cliSections} = autoAdd(config));
+  ({sections: cliSections} = await autoAdd(config));
 } catch (err) {
   throw new Error(`Error reading file "${config}": ${err.toString()}`);
 }
@@ -42,4 +45,3 @@ await (
 );
 
 console.log(`File written to ${target}!`);
-})();

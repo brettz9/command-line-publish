@@ -46,14 +46,12 @@ contents served from Github Pages.
 ## Programmatic usage
 
 ```js
-'use strict';
-
-const {html, svg} = require('command-line-publish');
+import {html, svg} from 'command-line-publish';
 
 // This JavaScript (or JSON) file must export a `sections` property,
 //  and for easier reusability, it is recommended that ths same file
 //  define a `definitions` property for use by `command-line-args`
-const {sections} = require('./path/to/config-file.js');
+import {sections} from './path/to/config-file.js';
 
 // The options objects are optional
 svg(sections, {target: 'cli.svg', ansiToSvgOptions: {}});
@@ -63,9 +61,11 @@ html(sections, {target: 'cli.html', ansiToHtmlOptions: {}});
 Here is a sampling of our own config file:
 
 ```js
-'use strict';
+import {readFile} from 'fs/promises';
 
-const pkg = require('../package.json');
+const pkg = JSON.parse(
+  await readFile(new URL('../package.json', import.meta.url))
+);
 
 const optionDefinitions = [
   {
@@ -97,8 +97,7 @@ const cliSections = [
   }
 ];
 
-exports.definitions = optionDefinitions;
-exports.sections = cliSections;
+export {optionDefinitions as definitions, cliSections as sections};
 ```
 
 ## See also

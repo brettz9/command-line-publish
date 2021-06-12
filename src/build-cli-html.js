@@ -1,12 +1,10 @@
-'use strict';
-
-const fs = require('fs');
-const AnsiToHTML = require('ansi-to-html/lib/ansi_to_html.js');
-const commandLineUsage = require('command-line-usage');
+import fs from 'fs';
+import AnsiToHTML from 'ansi-to-html/lib/ansi_to_html.js';
+import commandLineUsage from 'command-line-usage';
 
 const {promises: {writeFile}} = fs;
 
-module.exports = async (cliSections, {target, ansiToHtmlOptions}) => {
+const buildCliHtml = async (cliSections, {target, ansiToHtmlOptions}) => {
   if (!Array.isArray(cliSections)) {
     throw new TypeError('You must include a `cliSections` array');
   }
@@ -45,3 +43,5 @@ module.exports = async (cliSections, {target, ansiToHtmlOptions}) => {
   `
   );
 };
+
+export default buildCliHtml;

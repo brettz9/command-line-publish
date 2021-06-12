@@ -1,12 +1,10 @@
-'use strict';
-
-const fs = require('fs');
-const ansiToSVG = require('ansi-to-svg');
-const commandLineUsage = require('command-line-usage');
+import fs from 'fs';
+import ansiToSVG from 'ansi-to-svg';
+import commandLineUsage from 'command-line-usage';
 
 const {promises: {writeFile}} = fs;
 
-module.exports = async (cliSections, {target, ansiToSvgOptions}) => {
+const buildCliSvg = async (cliSections, {target, ansiToSvgOptions}) => {
   if (!Array.isArray(cliSections)) {
     throw new TypeError('You must include a `cliSections` array');
   }
@@ -21,3 +19,5 @@ module.exports = async (cliSections, {target, ansiToSvgOptions}) => {
     ansiSVG
   );
 };
+
+export default buildCliSvg;
