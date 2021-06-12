@@ -9,6 +9,7 @@
   },
   "scripts": {
     "eslint": "eslint --ext js,md,html .",
+    "lint": "npm run eslint",
     "help": "./bin/clp.js --help",
     "version": "./bin/clp.js --version",
     "build-cli-html": "./bin/clp.js --format=html --config=\"./src/optionDefinitions.js\" --target=\"cli.html\"",
@@ -37,7 +38,7 @@
   "bugs": "https://github.com/brettz9/command-line-publish/issues",
   "homepage": "https://github.com/brettz9/command-line-publish",
   "engines": {
-    "node": ">=10.0.0"
+    "node": ">=14.0.0"
   },
   "repository": {
     "type": "git",
@@ -46,29 +47,28 @@
   "dependencies": {
     "ansi-to-html": "git+https://github.com/brettz9/ansi-to-html.git#css-publish",
     "ansi-to-svg": "^1.4.3",
-    "command-line-basics": "^0.7.0",
-    "command-line-usage": "^6.1.0",
+    "command-line-basics": "^1.0.0",
+    "command-line-usage": "^6.1.1",
     "node-alias": "^1.0.4"
   },
   "devDependencies": {
-    "@mysticatea/eslint-plugin": "^13.0.0",
-    "eslint": "^6.8.0",
-    "eslint-config-ash-nazg": "^17.1.0",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-array-func": "^3.1.3",
-    "eslint-plugin-compat": "^3.5.1",
-    "eslint-plugin-eslint-comments": "^3.1.2",
-    "eslint-plugin-html": "^6.0.0",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-jsdoc": "^21.0.0",
-    "eslint-plugin-markdown": "^1.0.1",
-    "eslint-plugin-no-unsanitized": "^3.0.2",
-    "eslint-plugin-no-use-extend-native": "^0.4.1",
-    "eslint-plugin-node": "^11.0.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-sonarjs": "^0.5.0",
-    "eslint-plugin-standard": "^4.0.1",
-    "eslint-plugin-unicorn": "^16.0.0",
-    "typescript": "^3.7.5"
+    "@brettz9/eslint-plugin": "^1.0.3",
+    "eslint": "^7.28.0",
+    "eslint-config-ash-nazg": "^29.17.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-array-func": "^3.1.7",
+    "eslint-plugin-compat": "^3.9.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsdoc": "^35.1.3",
+    "eslint-plugin-markdown": "^2.2.0",
+    "eslint-plugin-no-unsanitized": "^3.1.5",
+    "eslint-plugin-no-use-extend-native": "^0.5.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-radar": "^0.2.1",
+    "eslint-plugin-standard": "^4.1.0",
+    "eslint-plugin-unicorn": "^33.0.1"
   }
 }

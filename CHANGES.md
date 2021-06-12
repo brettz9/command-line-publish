@@ -1,7 +1,17 @@
 # CHANGES for `command-line-publish`
 
-## ?
+## 1.0.0
 
+### User-facing
+
+- Breaking change: Require Node 14+
+- npm: Update `command-line-basics` (major), `command-line-usage` (patch)
+
+### Dev-facing
+
+- npm: Update devDeps.
+- npm: Switch to pnpm
+- Linting: As per latest
 - npm: Add `build-cli` script
 
 ## 0.7.0

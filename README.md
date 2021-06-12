@@ -46,6 +46,8 @@ contents served from Github Pages.
 ## Programmatic usage
 
 ```js
+'use strict';
+
 const {html, svg} = require('command-line-publish');
 
 // This JavaScript (or JSON) file must export a `sections` property,

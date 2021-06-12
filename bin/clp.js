@@ -3,7 +3,7 @@
 
 const {cliBasics, autoAdd} = require('command-line-basics');
 
-const {html: buildCliHtml, svg: buildCliSvg} = require('../');
+const {html: buildCliHtml, svg: buildCliSvg} = require('../index.js');
 
 const options = cliBasics({
   optionsPath: '../src/optionDefinitions.js',
@@ -11,8 +11,7 @@ const options = cliBasics({
 });
 
 if (!options) {
-  // eslint-disable-next-line no-process-exit
-  process.exit();
+  process.exit(0);
 }
 
 const {
@@ -36,11 +35,11 @@ try {
   throw new Error(`Error reading file "${config}": ${err.toString()}`);
 }
 
-if (format === 'svg') {
-  await buildCliSvg(cliSections, {target});
-} else {
-  await buildCliHtml(cliSections, {target});
-}
+await (
+  format === 'svg'
+    ? buildCliSvg(cliSections, {target})
+    : buildCliHtml(cliSections, {target})
+);
 
 console.log(`File written to ${target}!`);
 })();
