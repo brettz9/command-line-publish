@@ -1,5 +1,11 @@
 # CHANGES for `command-line-publish`
 
+## 1.1.0
+
+- Enhancement: Allow supplying of title (currently HTML only), defaulting to
+    "CLI Docs"
+- Fix: Avoid copy-paste error producing "Git Utilities CLI docs"
+
 ## 1.0.0
 
 ### User-facing

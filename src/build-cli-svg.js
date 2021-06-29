@@ -4,7 +4,7 @@ import commandLineUsage from 'command-line-usage';
 
 const {promises: {writeFile}} = fs;
 
-const buildCliSvg = async (cliSections, {target, ansiToSvgOptions}) => {
+const buildCliSvg = async (cliSections, {target, ansiToSvgOptions, title}) => {
   if (!Array.isArray(cliSections)) {
     throw new TypeError('You must include a `cliSections` array');
   }
@@ -13,6 +13,7 @@ const buildCliSvg = async (cliSections, {target, ansiToSvgOptions}) => {
   }
   const ansiText = commandLineUsage(cliSections);
   const ansiSVG = ansiToSVG(ansiText, ansiToSvgOptions);
+  // Todo: Inject the `title`
   await writeFile(
     // new URL(target, import.meta.url).pathname,
     target,

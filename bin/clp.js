@@ -21,6 +21,7 @@ if (!options) {
 const {
   config,
   target,
+  title,
   format = 'svg'
 } = options;
 
@@ -40,8 +41,8 @@ try {
 
 await (
   format === 'svg'
-    ? buildCliSvg(cliSections, {target})
-    : buildCliHtml(cliSections, {target})
+    ? buildCliSvg(cliSections, {target, title})
+    : buildCliHtml(cliSections, {target, title})
 );
 
 console.log(`File written to ${target}!`);

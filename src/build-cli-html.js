@@ -4,7 +4,9 @@ import commandLineUsage from 'command-line-usage';
 
 const {promises: {writeFile}} = fs;
 
-const buildCliHtml = async (cliSections, {target, ansiToHtmlOptions}) => {
+const buildCliHtml = async (cliSections, {
+  target, ansiToHtmlOptions, title
+}) => {
   if (!Array.isArray(cliSections)) {
     throw new TypeError('You must include a `cliSections` array');
   }
@@ -25,7 +27,7 @@ const buildCliHtml = async (cliSections, {target, ansiToHtmlOptions}) => {
       <meta charset="utf-8" />
       <link href="data:image/x-icon;," type="image/x-icon"
         rel="shortcut icon" />
-      <title>Git Utilities CLI docs</title>
+      <title>${title || 'CLI Docs'}</title>
       <style>
       body {
           @keyframes blink {

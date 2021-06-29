@@ -22,6 +22,11 @@ const optionDefinitions = [
     name: 'format', alias: 'f', type: String,
     description: 'Format of the output; defaults to "svg".',
     typeLabel: '{underline "svg"|"html"}'
+  },
+  {
+    name: 'title', type: String,
+    description: 'Title tag text; defaults to "CLI Docs".',
+    typeLabel: '{underline title string}'
   }
 ];
 
