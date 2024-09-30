@@ -1,2 +1,3 @@
 .gitignore
 pnpm-lock.yaml
+eslint.config.js

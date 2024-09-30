@@ -1,8 +1,6 @@
-import fs from 'fs';
+import {writeFile} from 'fs/promises';
 import AnsiToHTML from 'ansi-to-html/lib/ansi_to_html.js';
 import commandLineUsage from 'command-line-usage';
-
-const {promises: {writeFile}} = fs;
 
 const buildCliHtml = async (cliSections, {
   target, ansiToHtmlOptions, title
@@ -39,7 +37,7 @@ const buildCliHtml = async (cliSections, {
       }
       </style>
     </head>
-    ${ansiToHTML.toHtml(ansiText.replace(/\\/gu, '\\\\'))}
+    ${ansiToHTML.toHtml(ansiText.replaceAll('\\', '\\\\'))}
     </body>
     </html>
   `

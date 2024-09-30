@@ -1,10 +1,10 @@
-import fs from 'fs';
+import {writeFile} from 'fs/promises';
 import ansiToSVG from 'ansi-to-svg';
 import commandLineUsage from 'command-line-usage';
 
-const {promises: {writeFile}} = fs;
-
-const buildCliSvg = async (cliSections, {target, ansiToSvgOptions, title}) => {
+const buildCliSvg = async (
+  cliSections, {target, ansiToSvgOptions /* , title */}
+) => {
   if (!Array.isArray(cliSections)) {
     throw new TypeError('You must include a `cliSections` array');
   }

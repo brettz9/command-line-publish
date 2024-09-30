@@ -1,5 +1,12 @@
 # CHANGES for `command-line-publish`
 
+## 2.0.0 (unreleased)
+
+BREAKING CHANGE:
+Require Node 18+
+
+- chore: update deps., devDeps, and lint
+
 ## 1.1.0
 
 - Enhancement: Allow supplying of title (currently HTML only), defaulting to
