@@ -3,9 +3,10 @@
 ## 2.0.0 (unreleased)
 
 BREAKING CHANGE:
-Require Node 18+
+Require Node ^20.11.0 || >= 22.0.0
 
-- chore: update deps., devDeps, and lint
+- fix: supply `command-line-basics` notifier info
+- chore: update deps., devDeps., and lint
 
 ## 1.1.0
 

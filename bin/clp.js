@@ -1,17 +1,15 @@
 #!/usr/bin/env node
 
-import {dirname} from 'path';
-import {fileURLToPath} from 'url';
-
 import {cliBasics, autoAdd} from 'command-line-basics';
 
 import {html as buildCliHtml, svg as buildCliSvg} from '../index.js';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-
 const options = await cliBasics({
   optionsPath: '../src/optionDefinitions.js',
-  cwd: __dirname
+  cwd: import.meta.dirname,
+  options: {
+    packageJsonPath: import.meta.dirname + '/../package.json'
+  }
 });
 
 if (!options) {

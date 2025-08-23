@@ -41,7 +41,7 @@
   "bugs": "https://github.com/brettz9/command-line-publish/issues",
   "homepage": "https://github.com/brettz9/command-line-publish",
   "engines": {
-    "node": ">=18.0.0"
+    "node": "^20.11.0 || >=22.0.0"
   },
   "repository": {
     "type": "git",
