@@ -50,15 +50,12 @@
   "dependencies": {
     "ansi-to-html": "github:brettz9/ansi-to-html#css-publish",
     "ansi-to-svg": "^1.4.3",
-    "command-line-basics": "^2.0.1",
+    "command-line-basics": "^3.0.0",
     "command-line-usage": "^7.0.3",
     "node-alias": "^1.0.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.25.2",
-    "@babel/eslint-parser": "^7.25.1",
-    "@babel/plugin-syntax-top-level-await": "^7.14.5",
-    "eslint": "^9.11.1",
-    "eslint-config-ash-nazg": "^36.17.1"
+    "eslint": "^9.34.0",
+    "eslint-config-ash-nazg": "^39.0.1"
   }
 }

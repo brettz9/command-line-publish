@@ -7,6 +7,7 @@ Require Node ^20.11.0 || >= 22.0.0
 
 - fix: supply `command-line-basics` notifier info
 - chore: update deps., devDeps., and lint
+- chore: update command-line-basics and devDeps.; remove Babel
 
 ## 1.1.0
 

@@ -9,7 +9,9 @@ export default [
     }
   },
   {
+    files: ['*.md/*.js'],
     rules: {
+      'import/no-unresolved': 'off'
     }
   }
 ];
